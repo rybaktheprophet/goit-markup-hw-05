@@ -67,6 +67,8 @@ a:link {
 nav a:hover,
 nav a:focus {
   color: var(--project-blue);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav {
@@ -95,6 +97,8 @@ nav a:focus {
   color: var(--project-blue);
   --color2: var(--project-blue);
   --color1: var(--project-blue);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-icon {
@@ -179,7 +183,8 @@ h1 {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  transition: all 0.3s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-article {
@@ -190,9 +195,10 @@ h1 {
 .main-article-items {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 0;
+  justify-content: space-between;
+  /* gap: 30px; */
+  margin: 0;
+  padding: 0;
 }
 
 .main-paragraph {
@@ -245,6 +251,7 @@ h2 {
   padding-top: 50px;
   padding-bottom: 94px;
   margin: 0;
+  padding-left: 0;
 }
 
 .team {
@@ -259,6 +266,7 @@ h2 {
   justify-content: center;
   gap: 30px;
   padding-top: 50px;
+  padding-left: 0;
 }
 
 .team-member {
@@ -306,7 +314,8 @@ h2 {
 .social-links li:focus {
   --color4: var(--primary-white);
   background-color: var(--project-blue);
-  transition: all 0.3s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 figure svg {
@@ -319,6 +328,7 @@ figure svg {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  padding-left: 0;
 }
 
 .clients li {
@@ -330,7 +340,8 @@ figure svg {
 .clients li:hover {
   --color3: var(--project-blue);
   border-color: var(--project-blue);
-  transition: all 0.3s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h3 {
@@ -366,6 +377,8 @@ footer {
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--project-blue);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-content {
@@ -410,9 +423,11 @@ footer {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.footer-social-links li:focus,
 .footer-social-links li:hover {
   background-color: var(--project-blue);
-  transition: all 0.3s;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer svg {
@@ -427,7 +442,9 @@ footer svg {
 
   color: #757575;
   background: #ffffff;
-  border-bottom: 1px solid #eeeeee;
+
+  transition: filter 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-project:hover,
@@ -439,6 +456,9 @@ footer svg {
   padding-left: 24px;
   padding-bottom: 20px;
   padding-top: 20px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 
 .portfolio-project-header {
@@ -542,6 +562,46 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-image:hover .overlay {
+.portfolio-project:hover .overlay {
   transform: translateY(0);
+}
+
+.portfolio-project > figcaption {
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--primary-white);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-white);
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
