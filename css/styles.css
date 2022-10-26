@@ -592,9 +592,6 @@ address {
   transform: translateY(0);
 }
 
-.portfolio-project > figcaption {
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -627,6 +624,9 @@ address {
   padding-right: 0;
   padding-top: 2px;
   padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .is-hidden {
