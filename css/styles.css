@@ -254,6 +254,32 @@ h2 {
   padding-left: 0;
 }
 
+.services-content-list {
+  position: relative;
+}
+
+.service-content li {
+  width: 370px;
+  height: 294px;
+}
+
+.services-content-description {
+  position: absolute;
+  z-index: 2;
+  width: 370px;
+  padding: 27px 27px;
+  text-transform: uppercase;
+  color: var(--primary-white);
+  margin-top: -73px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
 .team {
   background-color: #f5f4fa;
   font-size: 16px;
@@ -543,7 +569,7 @@ address {
 
 .overlay {
   width: 100%;
-  height: 100%;
+  height: 101%;
   color: var(--primary-white);
   background-color: var(--project-blue);
   opacity: 0.9;
@@ -598,6 +624,9 @@ address {
   border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 50%;
   cursor: pointer;
+  padding-right: 0;
+  padding-top: 2px;
+  padding-left: 0;
 }
 
 .is-hidden {
