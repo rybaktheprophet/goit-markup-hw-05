@@ -3,6 +3,8 @@
   --project-black: #212121;
   --background-black: #2f303a;
   --primary-white: #fff;
+  --grey: #757575;
+  --icon-grey: #afb1b8;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
   top: 44px;
   position: absolute;
   display: block;
-  background: #2196f3;
+  background: var(--project-blue);
   border-radius: 2px;
 }
 
@@ -82,37 +84,51 @@ nav a:focus {
 }
 
 .header-contact {
-  color: #757575;
+  color: var(--grey);
+  fill: var(--grey);
   text-decoration: none;
   line-height: 16px;
   display: flex;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contact svg {
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail {
   margin-right: 30px;
 }
 
-.header-contact:hover,
-.header-contact:focus {
+.header-contact:hover {
   color: var(--project-blue);
-  --color2: var(--project-blue);
-  --color1: var(--project-blue);
+  fill: var(--project-blue);
+}
+
+.header-contact:hover svg {
+  color: var(--project-blue);
+  fill: var(--project-blue);
+}
+
+.contact-icon {
+  fill: var(--grey);
+  margin-right: 10px;
+  height: 16px;
+  align-items: center;
+  transition-property: fill;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-icon {
-  fill: #757575;
-  margin-right: 10px;
-  height: 16px;
-  align-items: center;
-}
-
 .contact-icon-mail {
-  fill: #757575;
+  fill: var(--grey);
   margin-right: 10px;
   height: 16px;
   padding-top: 1px;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1 {
@@ -120,7 +136,7 @@ h1 {
 }
 
 .main-title {
-  color: #fff;
+  color: var(--primary-white);
   max-width: 1600px;
   margin: 0 auto;
   font-weight: 900;
@@ -146,7 +162,7 @@ h1 {
 }
 
 .btn {
-  color: #fff;
+  color: var(--primary-white);
   background-color: var(--project-blue);
   border: 0px;
   border-radius: 4px;
@@ -178,7 +194,7 @@ h1 {
 
 .filter-btn:hover,
 .filter-btn:focus {
-  color: #fff;
+  color: var(--primary-white);
   background-color: var(--project-blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -205,7 +221,7 @@ h1 {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--grey);
   width: 270px;
 }
 
@@ -235,7 +251,7 @@ h2 {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: #fff;
+  background-color: var(--primary-white);
 }
 
 .services {
@@ -296,8 +312,7 @@ h2 {
 }
 
 .team-member {
-  background-color: #fff;
-  background: #ffffff;
+  background-color: var(--primary-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -311,13 +326,13 @@ h2 {
   align-items: center;
   padding-bottom: 30px;
   padding-top: 30px;
-  color: #757575;
+  color: var(--grey);
   letter-spacing: 00.03em;
 }
 
 .social-links {
   list-style: none;
-  --color4: #afb1b8;
+  fill: var(--icon-grey);
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 30px;
@@ -349,7 +364,7 @@ figure svg {
 }
 
 .clients {
-  fill: #afb1b8;
+  fill: var(--icon-grey);
   padding-top: 50px;
   list-style: none;
   display: flex;
@@ -360,14 +375,14 @@ figure svg {
 .clients li {
   height: 92px;
   width: 170px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-grey);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients li:hover {
-  --color3: var(--project-blue);
+  fill: var(--project-blue);
   border-color: var(--project-blue);
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h3 {
@@ -447,13 +462,13 @@ footer {
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-links li:focus,
 .footer-social-links li:hover {
   background-color: var(--project-blue);
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer svg {
@@ -466,8 +481,8 @@ footer svg {
   letter-spacing: 0.03em;
   margin: 0;
 
-  color: #757575;
-  background: #ffffff;
+  color: var(--grey);
+  background: var(--primary-white);
 
   transition: filter 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -550,10 +565,6 @@ address {
   padding-top: 25px;
   padding-left: 100px;
   margin-bottom: 30px;
-}
-
-.contact-icon {
-  fill: #757575;
 }
 
 .portfolio-image {
